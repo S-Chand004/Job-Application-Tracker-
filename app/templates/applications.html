@@ -1,0 +1,11 @@
+<h2>My Applications</h2>
+
+{% for app in apps %}
+  <p>
+    <b>{{ app[0] }}</b> — {{ app[1] }} <br>
+    Status: {{ app[2] }} <br>
+    Applied on: {{ app[3] }} <br>
+    Notes: {{ app[4] }}
+  </p>
+  <hr>
+{% endfor %}

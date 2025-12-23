@@ -1,0 +1,21 @@
+<h2>Add Job Application</h2>
+
+<form method="post">
+  <input name="company" placeholder="Company" required><br>
+  <input name="role" placeholder="Role" required><br>
+
+  <label>Status:</label>
+  <select name="status">
+    <option value="applied">Applied</option>
+    <option value="interview">Interview</option>
+    <option value="offer">Offer</option>
+    <option value="rejected">Rejected</option>
+  </select><br>
+
+  <label>Applied Date:</label>
+  <input type="date" name="applied_date" required><br>
+
+  <textarea name="notes" placeholder="Notes (optional)"></textarea><br>
+
+  <button type="submit">Add</button>
+</form>
