@@ -6,6 +6,7 @@
     Status: {{ app[2] }} <br>
     Applied on: {{ app[3] }} <br>
     Notes: {{ app[4] }}
+    <a href="/edit/{{ loop.index }}">Edit</a>
   </p>
   <hr>
 {% endfor %}
