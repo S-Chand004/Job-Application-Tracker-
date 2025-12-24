@@ -1,0 +1,27 @@
+<h2>Edit Application</h2>
+
+<form method="post">
+  <label>Company</label>
+  <input name="company" value="{{ app[0] }}" required><br>
+
+  <label>Role</label>
+  <input name="role" value="{{ app[1] }}" required><br>
+
+  <label>Status</label>
+  <select name="status">
+    <option value="applied" {% if app[2]=='applied' %}selected{% endif %}>Applied</option>
+    <option value="interview" {% if app[2]=='interview' %}selected{% endif %}>Interview</option>
+    <option value="offer" {% if app[2]=='offer' %}selected{% endif %}>Offer</option>
+    <option value="rejected" {% if app[2]=='rejected' %}selected{% endif %}>Rejected</option>
+  </select><br>
+
+  <label>Applied Date</label>
+  <input type="date" name="applied_date" value="{{ app[3] }}" required><br>
+
+  <label>Notes</label>
+  <textarea name="notes">{{ app[4] }}</textarea><br>
+
+  <button type="submit">Save Changes</button>
+</form>
+
+<p><a href="/applications">Back</a></p>
