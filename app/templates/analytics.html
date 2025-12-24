@@ -1,0 +1,13 @@
+<h2>My Analytics</h2>
+
+<h3>Applications by Status</h3>
+{% for row in status_counts %}
+  <p>{{ row[0] }} : {{ row[1] }}</p>
+{% endfor %}
+
+<h3>Applications per Month</h3>
+{% for row in month_counts %}
+  <p>{{ row[0] }} : {{ row[1] }}</p>
+{% endfor %}
+
+<p><a href="/dashboard">Back to Dashboard</a></p>
