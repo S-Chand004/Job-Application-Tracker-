@@ -1,3 +1,7 @@
+<p>
+  <a href="/logout">Logout</a>
+</p>
+
 <h2>My Applications</h2>
 
 {% for app in apps %}
@@ -6,7 +10,7 @@
     Status: {{ app[2] }} <br>
     Applied on: {{ app[3] }} <br>
     Notes: {{ app[4] }}
-    <a href="/edit/{{ loop.index }}">Edit</a>
+    <a href="/edit/{{ app[5] }}">Edit</a>
   </p>
   <hr>
 {% endfor %}
