@@ -12,7 +12,7 @@ def dashboard():
 @applications_bp.route('/add-application', methods = ['GET', 'POST'])
 def add_application():
     if 'user_id' not in session:
-        redirect(url_for('auth.login'))
+        return redirect(url_for('auth.login'))
     
     if request.method == 'POST':
         company = request.form['company']
@@ -37,7 +37,7 @@ def add_application():
 @applications_bp.route('/applications')
 def view_applications():
     if 'user_id' not in session:
-        redirect(url_for('auth.login'))
+        return redirect(url_for('auth.login'))
 
     user_id = session['user_id']
     cur = mysql.connection.cursor()
@@ -52,7 +52,7 @@ def view_applications():
 @applications_bp.route('/edit/<app_id>', methods = ['GET', 'POST'])
 def edit_applications(app_id):
     if 'user_id' not in session:
-        redirect(url_for('auth.login'))
+        return redirect(url_for('auth.login'))
     
     user_id = session['user_id']
 
