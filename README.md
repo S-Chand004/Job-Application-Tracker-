@@ -19,8 +19,8 @@ Tech Stack:
 
 1. Python, Flask
 2. MySQL (Flask-MySQLdb)
-3. HTML/CSS templates
-4. SQL Joins & aggregations
+3. SQL Joins & aggregations
+4. Simple HTML Templates
 
 Project Structure:
 
@@ -35,7 +35,7 @@ Database Schema:
 1. users
 2. applications
 
-MySQL Queries:
+MySQL Schema:
 
 CREATE DATABASE job_tracker_db;
 USE job_tracker_db;
